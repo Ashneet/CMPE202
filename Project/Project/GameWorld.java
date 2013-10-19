@@ -29,5 +29,16 @@ public class GameWorld extends World
 
         Boy boy = new Boy();
         addObject(boy, 400, 507);
+        Pedestrian pedestrian = new Pedestrian();
+        addObject(pedestrian, 35, 306);
+        Cycle cycle = new Cycle();
+        addObject(cycle, 770, 231);
+        Car car = new Car();
+        addObject(car, 748, 30);
+        Poiner poiner = new Poiner();
+        addObject(poiner, 30, 500);
+        poiner.setLocation(26, 500);
+        cycle.setLocation(770, 189);
+        cycle.setLocation(770, 191);
     }
 }

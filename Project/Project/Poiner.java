@@ -1,28 +1,27 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Boy here.
+ * Write a description of class Poiner here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Boy extends Actor
+public class Poiner extends Actor
 {
     /**
-     * Act - do whatever the Boy wants to do. This method is called whenever
+     * Act - do whatever the Poiner wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act() 
     {
-        if(Greenfoot.isKeyDown("left"))
+        setRotation(270);
+         if(Greenfoot.isKeyDown("z"))
         {
-            this.move(-5);
+            this.move(3);
         }
-        
-         if(Greenfoot.isKeyDown("right"))
+        else
         {
-            this.move(5);
+            this.setLocation(25, 500);
         }
-        
     }    
 }
