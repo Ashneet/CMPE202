@@ -22,7 +22,7 @@ import java.util.ArrayList;
  * @author Michael Berry
  * @version 10/09/08
  */
-public abstract class GifActor extends Actor
+public abstract class GifActor extends GamePlay
 {
     /** The images used in the animation. */
     private GreenfootImage[] images;

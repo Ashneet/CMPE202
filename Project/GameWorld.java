@@ -35,10 +35,13 @@ public class GameWorld extends World
         addObject(cycle, 770, 231);
         Car car = new Car();
         addObject(car, 748, 30);
-        Poiner poiner = new Poiner();
-        addObject(poiner, 30, 500);
-        poiner.setLocation(26, 500);
+        Pointer pointer = new Pointer();
+        addObject(pointer, 30, 500);
+        pointer.setLocation(26, 500);
         cycle.setLocation(770, 189);
         cycle.setLocation(770, 191);
+        Balloon balloon = new Balloon();
+        addObject(balloon, 480, 536);
+        balloon.setLocation(475, 531);
     }
 }

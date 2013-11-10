@@ -19,9 +19,6 @@ public class Car extends GifActor
         {
             this.turn(180);
         }
-        if(!Greenfoot.isKeyDown("z"))
-        {
-            
-        }
+       
     }    
 }
