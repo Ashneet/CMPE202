@@ -8,7 +8,43 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class GameWorld extends World
 {
+    
+    private Boy boy;
+    private Car car;
+    private Cycle cycle;
+    private Pedestrian pedestrian;
+    private Balloon balloon;
+    private Pointer pointer;
+    
+    public Boy getBoy()
+    {
+        return this.boy;
+    }
+    
+    public Car getCar()
+    {
+        return this.car;
+    }
+    
+    public Cycle getCycle()
+    {
+        return this.cycle;
+    }
+    
+    public Pedestrian getPedestrian()
+    {
+        return this.pedestrian;
+    }
 
+    public Balloon getBalloon()
+    {
+        return this.balloon;
+    }
+    
+    public Pointer getPointer()
+    {
+        return this.pointer;
+    }
     /**
      * Constructor for objects of class GameWorld.
      * 
@@ -27,18 +63,21 @@ public class GameWorld extends World
     private void prepare()
     {
 
-        Boy boy = new Boy();
+        this.boy = new Boy();
         addObject(boy, 400, 507);
-        Pedestrian pedestrian = new Pedestrian();
+        this.pedestrian = new Pedestrian();
         addObject(pedestrian, 35, 306);
-        Cycle cycle = new Cycle();
+        this.cycle = new Cycle();
         addObject(cycle, 770, 231);
-        Car car = new Car();
+        this.car = new Car();
         addObject(car, 748, 30);
-        Poiner poiner = new Poiner();
-        addObject(poiner, 30, 500);
-        poiner.setLocation(26, 500);
+        this.pointer = new Pointer();
+        addObject(pointer, 30, 500);
+        pointer.setLocation(26, 500);
         cycle.setLocation(770, 189);
         cycle.setLocation(770, 191);
+        this.balloon = new Balloon();
+        addObject(balloon, 480, 536);
+        balloon.setLocation(475, 531);
     }
 }
