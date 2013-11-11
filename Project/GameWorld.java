@@ -15,10 +15,16 @@ public class GameWorld extends World
     private Pedestrian pedestrian;
     private Balloon balloon;
     private Pointer pointer;
+    private Splash splash;
     
     public Boy getBoy()
     {
         return this.boy;
+    }
+    
+    public Splash getSplash()
+    {
+        return this.splash;
     }
     
     public Car getCar()
@@ -73,11 +79,8 @@ public class GameWorld extends World
         addObject(car, 748, 30);
         this.pointer = new Pointer();
         addObject(pointer, 30, 500);
-        pointer.setLocation(26, 500);
-        cycle.setLocation(770, 189);
-        cycle.setLocation(770, 191);
         this.balloon = new Balloon();
         addObject(balloon, 480, 536);
-        balloon.setLocation(475, 531);
+        this.splash = new Splash();
     }
 }
