@@ -32,7 +32,7 @@ public class Balloon extends GamePlay
            shootFlag = true;
            this.setLocation(getBoyX(), getPointerY());
            gameWorld.addObject(splash, getBoyX(), getPointerY());
-           Greenfoot.delay(8);
+           Greenfoot.delay(15);
            World world = getWorld();
            world.removeObject(splash);
            balloon = gameWorld.getBalloon();
