@@ -14,7 +14,7 @@ public class GamePlay extends Actor
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     
-    boolean shootFlag;
+    boolean shootFlag = false;
 
     public void act() 
     {

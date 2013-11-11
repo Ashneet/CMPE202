@@ -14,6 +14,9 @@ public class Balloon extends GamePlay
      */
     public void act() 
     {
+        Actor balloon;
+        GameWorld gameWorld = (GameWorld) getWorld();
+        Splash splash = gameWorld.getSplash();
          if(Greenfoot.isKeyDown("left"))
         {
             this.move(-5);
@@ -28,14 +31,19 @@ public class Balloon extends GamePlay
         {
            shootFlag = true;
            this.setLocation(getBoyX(), getPointerY());
-           resetPointerLocation();
+           gameWorld.addObject(splash, getBoyX(), getPointerY());
+           Greenfoot.delay(8);
+           World world = getWorld();
+           world.removeObject(splash);
+           balloon = gameWorld.getBalloon();
+           resetPointerLocation(balloon);
         }
     }    
     
     private int getPointerY()
     {
         GameWorld world = (GameWorld) getWorld();
-	Pointer pointer = world.getPointer();
+	    Pointer pointer = world.getPointer();
         return pointer.getY();
     }
     
@@ -46,12 +54,13 @@ public class Balloon extends GamePlay
         return boy.getX();
     }
     
-    private void resetPointerLocation()
+    private void resetPointerLocation(Actor obj)
     {
         GameWorld world = (GameWorld) getWorld();
-	Pointer pointer = world.getPointer();
+	    Pointer pointer = world.getPointer();
         pointer.setLocation(25, 500);
+        obj.setLocation(480,536);
     }
     
-        
+
 }
