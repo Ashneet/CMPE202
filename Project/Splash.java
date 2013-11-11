@@ -1,25 +1,19 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-import java.util.List;
 
 /**
- * Write a description of class GamePlay here.
+ * Write a description of class Splash here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class GamePlay extends Actor
+public class Splash extends GamePlay
 {
     /**
-     * Act - do whatever the GamePlay wants to do. This method is called whenever
+     * Act - do whatever the Splash wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    
-    boolean shootFlag = false;
-
     public void act() 
     {
-        //TODO
-    }
-
-    
+        // Add your action code here.
+    }    
 }

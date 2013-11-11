@@ -14,6 +14,7 @@ public class Boy extends GamePlay
      */
     public void act() 
     {
+        Actor balloon;
         if(Greenfoot.isKeyDown("left"))
         {
             this.move(-5);
@@ -23,6 +24,7 @@ public class Boy extends GamePlay
         {
             this.move(5);
         }
+        
         
     }    
 }
