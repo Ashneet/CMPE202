@@ -15,6 +15,7 @@ public class GameWorld extends World
     private Pedestrian pedestrian;
     private Balloon balloon;
     private Pointer pointer;
+    private Timer timer;
     
     public Boy getBoy()
     {
@@ -24,6 +25,11 @@ public class GameWorld extends World
     public Car getCar()
     {
         return this.car;
+    }
+    
+    public Timer getTimer()
+    {
+        return this.timer;
     }
     
     public Cycle getCycle()
@@ -71,21 +77,12 @@ public class GameWorld extends World
         addObject(cycle, 770, 231);
         this.car = new Car();
         addObject(car, 748, 30);
-<<<<<<< HEAD:Project/Project/GameWorld.java
         this.pointer = new Pointer();
-=======
-        Pointer pointer = new Pointer();
->>>>>>> 4cb052aed3a2dd967270a1f298b4b1044c3bdd4a:Project/GameWorld.java
         addObject(pointer, 30, 500);
-        pointer.setLocation(26, 500);
-        cycle.setLocation(770, 189);
-        cycle.setLocation(770, 191);
-<<<<<<< HEAD:Project/Project/GameWorld.java
         this.balloon = new Balloon();
-=======
-        Balloon balloon = new Balloon();
->>>>>>> 4cb052aed3a2dd967270a1f298b4b1044c3bdd4a:Project/GameWorld.java
         addObject(balloon, 480, 536);
-        balloon.setLocation(475, 531);
+        this.timer = new Timer();
+        addObject(this.timer,800,450);
+        
     }
 }
