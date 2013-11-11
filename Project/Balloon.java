@@ -34,34 +34,23 @@ public class Balloon extends GamePlay
     
     private int getPointerY()
     {
-        List<Pointer> pointerList = getWorld().getObjects(Pointer.class);
-        if(!pointerList.isEmpty())
-        {
-            Pointer pointer = (Pointer)pointerList.get(0);
-            return pointer.getY();
-        }
-        return this.getY();
+        GameWorld world = (GameWorld) getWorld();
+	Pointer pointer = world.getPointer();
+        return pointer.getY();
     }
     
     private int getBoyX()
     {
-         List<Boy> boyList = getWorld().getObjects(Boy.class);
-        if(!boyList.isEmpty())
-        {
-            Boy boy = (Boy)boyList.get(0);
-            return boy.getX();
-        }
-        return this.getX();
+        GameWorld world = (GameWorld) getWorld();
+	Boy boy = world.getBoy();
+        return boy.getX();
     }
     
     private void resetPointerLocation()
     {
-        List<Pointer> pointerList = getWorld().getObjects(Pointer.class);
-        if(!pointerList.isEmpty())
-        {
-            Pointer pointer = (Pointer)pointerList.get(0);
-            pointer.setLocation(25, 500);
-        }
+        GameWorld world = (GameWorld) getWorld();
+	Pointer pointer = world.getPointer();
+        pointer.setLocation(25, 500);
     }
     
         
