@@ -59,7 +59,7 @@ public class Balloon extends GamePlay
         GameWorld world = (GameWorld) getWorld();
 	    Pointer pointer = world.getPointer();
         pointer.setLocation(25, 500);
-        obj.setLocation(480,536);
+        obj.setLocation(getBoyX()+81,536);
     }
     
 

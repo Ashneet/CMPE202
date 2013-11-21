@@ -8,7 +8,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Score extends GamePlay implements IMessage
 {
-    private static int score = 0
+    private static int score = 0;
+    int timerCount = 12000;
     public void act() 
     {
         
@@ -17,8 +18,8 @@ public class Score extends GamePlay implements IMessage
     public void drawMessage(){
         GreenfootImage img = this.getImage();
         img.clear();
-        img.setColor(Color.BLUE);
-        img.setFont(font);
+        //img.setColor(Color.BLUE);
+        //img.setFont(16);
         int time = timerCount/100;
         img.drawString("Score : " + score ,0,200);
         //if(timerCount != 0)
